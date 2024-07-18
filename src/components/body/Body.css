@@ -1,0 +1,63 @@
+.restitle {
+    color: #161A1F;
+    font-family: sans-serif;
+    margin-top: 10px;
+    margin-left: 140px;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.res-container {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 150px;
+}
+
+.outer {
+    width: 80%;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+
+.restaurant-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjusted to fit new card size */
+    grid-gap: 20px;
+}
+
+.filter-btns {
+    text-align: center;
+}
+
+.filter-btns button {
+    background-color: white;
+    border: 2px solid #E2E2E7;
+    color: #414449;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 25px 10px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.titlechain {
+    color: #161A1F;
+    font-family: sans-serif;
+    margin-top: 10px;
+    margin-left: 140px;
+    font-weight: 800;
+    font-size: 1.5rem;
+}

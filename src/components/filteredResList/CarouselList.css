@@ -1,0 +1,37 @@
+.carousel-list-container {
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 20px;
+
+}
+
+.carousel-list-container h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.carousel-list-container p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.filters {
+  /* Add your styles for filters */
+}
+
+.restaurant-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ensure this matches the card size */
+  grid-gap: 20px;
+}
+
+.restaurant-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.restaurant-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}

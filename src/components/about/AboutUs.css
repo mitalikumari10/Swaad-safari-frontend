@@ -1,0 +1,92 @@
+/* General styles */
+.about-container {
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 40px;
+  background-color: #eaf4ea; /* Light green background */
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Content styles */
+.about-content {
+  background-color: #d5e8d4; /* Pale green background for written portion */
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.about-container h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #3a6c3a; /* Dark green text color */
+}
+
+.about-content p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-container h2 {
+  font-size: 2.5rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #3a6c3a; /* Dark green text color */
+}
+
+.about-container ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.about-container ul li {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: #333;
+  list-style-type: none; /* Remove default bullet points */
+  line-height: 1.8;
+}
+
+.about-container ul li:before {
+  content: "\2022"; /* Unicode bullet point */
+  color: #3a6c3a; /* Dark green color */
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.about-container ul li strong {
+  font-weight: bold;
+}
+
+.tech-info p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

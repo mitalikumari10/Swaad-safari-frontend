@@ -1,0 +1,146 @@
+.footer {
+  background: #222;
+  color: #ddd;
+  padding: 20px 0;
+  font-family: 'Arial', sans-serif;
+  margin-top: 150px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-about {
+  flex: 1;
+   margin: 20px;
+}
+
+.footer-about h3 {
+  color: #fff;
+  margin-left: -20px;
+}
+
+.footer-about p {
+  margin-top: 9px;
+  padding: 0;
+  color: #ddd;
+  width: 250px;
+  margin-left: -20px;
+}
+
+.footer-links {
+  flex: 1;
+  min-width: 200px;
+  margin: 20px;
+}
+
+.footer-links h3 {
+  color: #fff;
+  margin-top: -1px;
+}
+
+.footer-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 10px 0;
+}
+
+.footer-links ul li a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  color:#4CAF50;
+}
+
+.footer-contact {
+  flex: 1;
+  min-width: 200px;
+  margin: 20px;
+}
+
+.footer-contact h3 {
+  color: #fff;
+  margin-left: -80px;
+  margin-top: -1px;
+}
+
+.footer-contact ul {
+  list-style: none;
+  margin-left: -80px;
+  padding: 0;
+}
+
+.footer-contact ul li {
+  margin: 10px 0;
+}
+
+.footer-contact ul li a {
+  color: #ddd;
+  text-decoration: none;
+  margin-top: -17px;
+  margin-left: 50px;
+}
+
+.footer-contact ul li a:hover {
+  color:#4CAF50 ;
+}
+.terms a
+{
+   margin-left: -27px;
+   color: white;
+}
+
+.terms a:hover
+{
+  color: #4CAF50;
+}
+#footer-social {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-social h3 {
+  color: #fff;
+  margin-right: -35px;
+  margin-top: 15.7px;
+}
+
+.footer-social .social-icons {
+  display: flex;
+  gap: 10px;
+  margin-left: -50px;
+  padding: 0;
+}
+
+.footer-social .social-icon {
+  color: #ddd;
+  font-size: 24px;
+}
+
+.footer-social .social-icon:hover {
+  color:#4CAF50;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #444;
+  margin-top: 20px;
+}
+.footer-bottom p
+{
+  color: #888888;
+  font-size: 14px;
+  margin-top: 10px;
+  font-family:sans-serif;
+}

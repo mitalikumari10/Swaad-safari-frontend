@@ -1,0 +1,97 @@
+.carousel-containerhp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    margin: 1rem auto;
+    border-bottom: 1px solid rgb(230, 226, 226);
+    padding-top: 1rem;
+    margin-top: 100px;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.carousel-containerhp .headerhp {
+    color: rgba(2, 6, 12, 0.92);
+    font-size: 1.5rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.scroll-arrowhp .svg-inline--fa {
+    background-color: #f2f2f2; /* Light grey background color */
+    padding: 0.4rem; /* Adjust padding for smaller size */
+    margin-left: 0.5rem; /* Adjust margin for positioning */
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.9rem; /* Adjust icon size */
+}
+
+.circle {
+    cursor: pointer;
+    margin: 0 3px; /* Decrease margin */
+    padding: 4px; /* Decrease padding */
+    border-radius: 50%;
+    background-color: #f2f2f2; /* Light grey background color */
+    transition: background-color 0.3s;
+}
+
+.circle.disabled {
+    background-color: #ccc; /* Light grey background color */
+}
+
+.headerhp .scroll-arrowhp {
+    margin-right: 0;
+    margin-top: 5px;
+}
+
+.headerhp .titlehp {
+    color: #161A1F;
+    margin-top: -10px;
+    margin-right: auto; /* Adjusted to push the scroll arrows to the right */
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+.carousel-containerhp .carouselhp {
+    display: flex;
+    justify-content: flex-start; /* Align to the start */
+    width: 100%;
+    max-height: 400px; /* Increased height */
+    overflow-x: scroll; /* Allow horizontal scrolling */
+    overflow-y: hidden; /* Hide the vertical scrollbar */
+    padding: 8px;
+    position: relative;
+    box-sizing: border-box; /* Ensure padding and width are considered together */
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+.carouselhp::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+}
+
+.carousel-innerhp {
+    display: flex;
+    transition: transform 0.5s ease;
+    align-items: center;
+    gap: 43px;
+    width: max-content; /* Ensure inner container adjusts to its content */
+}
+
+.carousel-containerhp .image img {
+    margin-top: -15px;
+    width: 9rem; /* Increased width */
+    height: 12rem; /* Increased height */
+    object-fit: cover;
+    overflow: hidden; /* Changed from clip to hidden */
+    border-style: none;
+    cursor: pointer;
+}

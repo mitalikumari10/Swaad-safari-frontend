@@ -1,0 +1,68 @@
+.contact-us-container {
+  
+    max-width: 500px;
+    margin: 120px auto;
+    padding: 40px;
+    background-color: #f9f9f9; /* Light gray background */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.contact-form {
+   
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px;
+    background-color: #fff; /* White background */
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color:#4CAF50; /* Orange border color on focus */
+}
+
+textarea {
+    height: 70px; /* Increase height for textarea */
+}
+
+.submitbtn {
+    padding: 15px 30px;
+    background-color: #4CAF50; /* Orange background */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.submitbtn:hover {
+    background-color:green; /* Lighter orange background on hover */
+}
+
+.success-message,
+.error-message {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.success-message {
+    color: #008000; /* Green text color for success message */
+    background-color: #e6f4ea; /* Light green background */
+}
+
+.error-message {
+    color: #ff0000; /* Red text color for error message */
+    background-color: #fde8e8; /* Light red background */
+}

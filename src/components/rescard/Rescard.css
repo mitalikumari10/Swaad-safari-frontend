@@ -1,0 +1,81 @@
+.rescontainer {
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.resCard:hover {
+    transform: translateY(-5px);
+   
+}
+
+.resCard {
+    position: relative; /* Add position relative to position absolute the info */
+    border-radius: 15px;
+    background-color: #fff;
+    width: 250px;
+    min-height: 200px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex; /* Add display flex to use flexbox */
+    flex-direction: column; /* Stack the content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+    position: relative; /* Add position relative */
+}
+.resCard img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.resCard .info {
+    padding: 20px;
+   
+}
+
+.resCard h3 {
+    margin-top: 5px;
+    font-size: 19px;
+    color: #333;
+}
+
+.resCard h4 {
+    margin: 8px 0;
+    font-size: 15px;
+    color: #666;
+}
+
+.resCard p {
+    margin: 4px 0;
+    font-size: 13px;
+    color: #888;
+}
+
+.resCard .rating {   
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    font-size: 14px;
+    color: #555;
+}
+
+.resCard .rating i {
+    margin-right: 4px;
+    color: #f8c10a;
+}
+
+.resCard .rating span {
+    margin-right: 8px;
+}
+
+.resCard .rating .veg {
+    color: #4caf50;
+}
+
+.resCard .rating .non-veg {
+    color: #f44336;
+}

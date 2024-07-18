@@ -1,0 +1,82 @@
+.restaurant-form {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .restaurant-form h2 {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 20px;
+  }
+  
+  .restaurant-form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #388e3c;
+    font-weight: bold;
+  }
+  
+  .restaurant-form input[type="text"],
+  .restaurant-form input[type="file"],
+  .restaurant-form textarea,
+  .restaurant-form input[type="number"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 5px 0 20px;
+    border: 1px solid #81c784;
+    border-radius: 5px;
+    background-color: #e8f5e9;
+    font-size: 16px;
+  }
+  
+  .restaurant-form input[type="text"]:focus,
+  .restaurant-form input[type="file"]:focus,
+  .restaurant-form textarea:focus,
+  .restaurant-form input[type="number"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+  
+  .restaurant-form textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  .restaurant-form button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .restaurant-form button:hover {
+    background-color: #388e3c;
+  }
+  
+  .restaurant-form .error {
+    color: #d32f2f;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .restaurant-form .success {
+    color: #388e3c;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  

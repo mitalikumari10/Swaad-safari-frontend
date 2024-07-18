@@ -1,0 +1,61 @@
+/* CitySelector.css */
+.city-selector-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Light gray background */
+  }
+
+  .city-selector{
+    margin-left: -170px;
+  }
+
+  .city-selector h3 {
+    color: #666666; /* Gray text */
+    margin-bottom: 10px; /* Spacing below the heading */
+  }
+  
+  .city-selector select {
+    padding: 10px;
+    font-size: 16px;
+    border:none; /* Light gray border */
+    border-radius: 5px;
+    background-color: #ffffff; /* White background */
+    color: #666666; /* Gray text */
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, border-color 0.3s;
+    width: 250px; /* Long width */
+    height: 40px; /* Short height */
+    background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjNjY2NjY2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MCA0MCI+PHBvbHlnb24gcG9pbnRzPSIyMCAyNS4xIDEwIDE1LjEgMTIuMiAxMi43IDIwIDIwLjUgMjcuOCAxMi43IDMwIDE1LjEgMjAgMjUuMSIvPjwvc3ZnPg=='); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 25px center; /* Adjusted position */
+  background-size: 22px; /* Smaller background image size */
+  }
+  
+  .city-selector select:hover {
+    background-color: #f0f0f0; /* Slightly darker gray on hover */
+    border-color: #aaaaaa; /* Darker gray border on hover */
+  }
+  
+  .city-selector select:focus {
+    background-color: #e0e0e0; /* Slightly darker gray on focus */
+    border-color: #888888; /* Darker gray border on focus */
+  }
+  
+  .city-selector option {
+    background-color: #ffffff; /* White background for options */
+    color: #666666; /* Gray text for options */
+  }
+  
+  .city-selector select::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .city-selector select::-webkit-scrollbar-thumb {
+    background-color: #cccccc; /* Gray color for scrollbar thumb */
+    border-radius: 4px;
+  }
+  

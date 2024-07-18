@@ -1,0 +1,40 @@
+
+/* Profile container */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #e0f7e9;
+  color: #2e7d32;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile header */
+.profile h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #1b5e20;
+}
+
+/* Profile paragraph */
+.profile p {
+  font-size: 1.2rem;
+  color: #388e3c;
+}
+
+/* Profile links */
+.profile a {
+  color: #1b5e20;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: color 0.3s ease;
+}
+
+.profile a:hover {
+  color: #4caf50;
+  text-decoration: underline;
+}

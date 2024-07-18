@@ -1,0 +1,133 @@
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import logo from './images/img.png';
+import { ICON1, ICON2, ICON3, ICON4, ICON5 } from '../../utils/common';
+import './Header.css';
+
+const Header = ({ cartItemCount, setToken, token }) => {
+  const [showLogin, setShowLogin] = useState(false);
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const toggleLogin = () => {
+    setShowLogin(!showLogin);
+  };
+
+  const switchMode = () => {
+    setIsSignUp(!isSignUp);
+  };
+
+  const handleAuth = async (e) => {
+    e.preventDefault();
+    const url = isSignUp ? 'http://localhost:8000/api/v1/auth/register' : 'http://localhost:8000/api/v1/auth/login';
+    try {
+      const body = isSignUp ? { name, email, password } : { email, password };
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      });
+      const data = await response.json();
+      if (response.ok) {
+        if (!isSignUp) {
+          setToken(data.token);
+        }
+        setShowLogin(false);
+        setErrorMessage('');
+      } else {
+        setErrorMessage(data.message);
+      }
+    } catch (error) {
+      setErrorMessage('An error occurred. Please try again.');
+    }
+  };
+
+  const handleLogout = async () => {
+    try {
+      // Call your logout endpoint
+      const response = await fetch('http://localhost:8000/api/v1/auth/logout', {
+        method: 'GET',
+        credentials: 'include'
+      });
+      if (response.ok) {
+        // Clear token or perform any necessary cleanup
+        setToken(null);
+      }
+    } catch (error) {
+      console.error('Logout error:', error);
+    }
+  };
+
+  return (
+    <div className='header'>
+      <Link to="/"><img className='logo' src={logo} alt='img' /></Link>
+      <div className='nav-items'>
+        <ul>
+          <Link to="/search"><img src={ICON1} alt='img' /><li>Search</li></Link>
+          <Link to="/about"><img src={ICON2} alt='img' /><li>About Us</li></Link>
+          <Link to="/contact"><img src={ICON3} alt='img' /><li>Contact Us</li></Link>
+          <Link to="/cart">
+            <img src={ICON5} alt='img' />
+            <li>
+              Cart {cartItemCount > 0 && <span className="cart-count">{cartItemCount}</span>}
+            </li>
+          </Link>
+          {token ? (
+            <>
+              <Link to="/myprofile"><li><img className='sign-icon' src={ICON4} alt='img' />My Profile</li></Link>
+              <li onClick={handleLogout}><img className='sign-icon' src={ICON4} alt='img' />Logout</li>
+            </>
+          ) : (
+            <li onClick={toggleLogin}><img className='sign-icon' src={ICON4} alt='img' />Sign In</li>
+          )}
+        </ul>
+      </div>
+      <div className={showLogin ? "overlay active" : "overlay"}></div>
+      <div className={showLogin ? "login-overlay active" : "login-overlay"}>
+        <div className="login-form">
+          <button className="close" onClick={toggleLogin}>X</button>
+          <div className='login-header'>
+            {isSignUp ? "Create Account" : "Login"}
+            <img src='https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Image-login_btpq7r' alt='logo' width="110px" />
+          </div>
+          <div className="create-account" onClick={switchMode}>
+            {isSignUp ? "Login to Your Account" : "Create an Account"}
+          </div>
+          <form onSubmit={handleAuth}>
+            {isSignUp && (
+              <input
+                type="text"
+                placeholder="Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            )}
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              autoComplete="email"
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              autoComplete="current-password"
+            />
+            {errorMessage && <p className="error-message">{errorMessage}</p>}
+            <button type="submit" className='loginbtn'>
+              {isSignUp ? "Continue" : "Login"}
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Header;
